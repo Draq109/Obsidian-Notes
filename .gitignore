@@ -1,0 +1,19 @@
+# Ignore workspace layout (which panes/files are open)
+.obsidian/workspace.json
+
+# Ignore per-device app state
+.obsidian/app.json
+
+# Ignore plugin cache/logs (these can be large/noisy)
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/cache/
+.obsidian/plugins/*/log*
+
+# Ignore Assets
+Assets/
+# Keep hotkeys, appearance, and snippets
+# (do NOT ignore these, so you can sync them)
+# .obsidian/hotkeys.json
+# .obsidian/appearance.json
+# .obsidian/snippets/
+
