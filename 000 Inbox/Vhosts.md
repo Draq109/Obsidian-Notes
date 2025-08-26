@@ -1,11 +1,10 @@
 ---
-created: 2025-08-14T18:16
-source:
-related: the main concept linking ideas
+created: 2025-08-25T17:38
+source: "[[Information Gathering - Web Edition]]"
+related:
 tags:
-  - status/inprogress
 ---
-# Subdomains
+# Vhosts
 
 ## Summary
 <!-- 2–3 sentence plain language explanation -->

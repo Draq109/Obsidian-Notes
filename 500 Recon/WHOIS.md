@@ -10,7 +10,7 @@ tags:
 # WHOIS
 
 ## Summary
-Is query search tool for returning information on a given domain, such as google.com. The information comes from either the TLD registry WHOIS server or the registrars WHOIS server. Contains registration, domain, and owner info if not privacy protected. IPs can also be queried, returning the IP block/CIDR its a part of and the IP block owner.
+Is a query search tool for returning information on a given domain, such as google.com. The information comes from either the TLD registry WHOIS server or the registrars WHOIS server. Contains registration, domain, and owner info if not privacy protected. IPs can also be queried, returning the IP block/CIDR its a part of and the IP block owner.
 
 ## Details
 - Information given can be vast and can include

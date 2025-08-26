@@ -1,8 +1,9 @@
 ---
-created: "2025-08-21T19:29"
-source: 
+created: 2025-08-21T19:29
+source:
 related: the main concept linking ideas
 tags:
+  - status/inprogress
 ---
 # DNS Query Process
 

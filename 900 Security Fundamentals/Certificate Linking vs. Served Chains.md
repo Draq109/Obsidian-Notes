@@ -1,6 +1,6 @@
 ---
 created: 2025-08-19T21:35
-source: "[[ChatGPT-What happens when CA issues certificates]]"
+source: "[[ChatGPT - What happens when CA issues certificates]]"
 related:
   - "[[SSL-TLS]]"
   - "[[Certificate Chain]]"

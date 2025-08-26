@@ -1,14 +1,18 @@
 ---
-created: 2025-08-14T18:16
-source:
-related: the main concept linking ideas
+created: 2025-08-25T19:25
+source: "[[Information Gathering - Web Edition]]"
+related: 
+  - "[[DNS]]"
+  - "[[Host File]]"
+  - "[[Passive Reconnaissance]]"
+  - "[[Active Reconnaissance]]"
+  - "[[Vhosts]]"
 tags:
-  - status/inprogress
 ---
-# Subdomains
+# HTB Exercise. Gathering info on webserver
 
 ## Summary
-<!-- 2–3 sentence plain language explanation -->
+Detailed process of recon done on nginx web server.
 
 ## Details
 <!-- Commands, breakdowns, examples -->

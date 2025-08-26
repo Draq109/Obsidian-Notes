@@ -1476,6 +1476,315 @@ Each key in the JSON file represents a different type of data extracted from the
 |`comments`|Lists HTML comments found in the source code.|
 
 By exploring this JSON structure, you can gain valuable insights into the web application's architecture, content, and potential points of interest for further investigation.
+
+# Search Engine Discovery
+
+---
+
+Search engines serve as our guides in the vast landscape of the internet, helping us navigate through the seemingly endless expanse of information. However, beyond their primary function of answering everyday queries, search engines also hold a treasure trove of data that can be invaluable for web reconnaissance and information gathering. This practice, known as search engine discovery or OSINT (Open Source Intelligence) gathering, involves using search engines as powerful tools to uncover information about target websites, organisations, and individuals.
+
+At its core, search engine discovery leverages the immense power of search algorithms to extract data that may not be readily visible on websites. Security professionals and researchers can delve deep into the indexed web by employing specialised search operators, techniques, and tools, uncovering everything from employee information and sensitive documents to hidden login pages and exposed credentials.
+
+## Why Search Engine Discovery Matters
+
+Search engine discovery is a crucial component of web reconnaissance for several reasons:
+
+- `Open Source`: The information gathered is publicly accessible, making it a legal and ethical way to gain insights into a target.
+    
+- `Breadth of Information`: Search engines index a vast portion of the web, offering a wide range of potential information sources.
+    
+- `Ease of Use`: Search engines are user-friendly and require no specialised technical skills.
+    
+- `Cost-Effective`: It's a free and readily available resource for information gathering.
+    
+
+The information you can pull together from Search Engines can be applied in several different ways as well:
+
+- `Security Assessment`: Identifying vulnerabilities, exposed data, and potential attack vectors.
+- `Competitive Intelligence`: Gathering information about competitors' products, services, and strategies.
+- `Investigative Journalism`: Uncovering hidden connections, financial transactions, and unethical practices.
+- `Threat Intelligence`: Identifying emerging threats, tracking malicious actors, and predicting potential attacks.
+
+However, it's important to note that search engine discovery has limitations. Search engines do not index all information, and some data may be deliberately hidden or protected.
+
+## Search Operators
+
+Search operators are like search engines' secret codes. These special commands and modifiers unlock a new level of precision and control, allowing you to pinpoint specific types of information amidst the vastness of the indexed web.
+
+While the exact syntax may vary slightly between search engines, the underlying principles remain consistent. Let's delve into some essential and advanced search operators:
+
+|Operator|Operator Description|Example|Example Description|
+|:--|:--|:--|:--|
+|`site:`|Limits results to a specific website or domain.|`site:example.com`|Find all publicly accessible pages on example.com.|
+|`inurl:`|Finds pages with a specific term in the URL.|`inurl:login`|Search for login pages on any website.|
+|`filetype:`|Searches for files of a particular type.|`filetype:pdf`|Find downloadable PDF documents.|
+|`intitle:`|Finds pages with a specific term in the title.|`intitle:"confidential report"`|Look for documents titled "confidential report" or similar variations.|
+|`intext:` or `inbody:`|Searches for a term within the body text of pages.|`intext:"password reset"`|Identify webpages containing the term “password reset”.|
+|`cache:`|Displays the cached version of a webpage (if available).|`cache:example.com`|View the cached version of example.com to see its previous content.|
+|`link:`|Finds pages that link to a specific webpage.|`link:example.com`|Identify websites linking to example.com.|
+|`related:`|Finds websites related to a specific webpage.|`related:example.com`|Discover websites similar to example.com.|
+|`info:`|Provides a summary of information about a webpage.|`info:example.com`|Get basic details about example.com, such as its title and description.|
+|`define:`|Provides definitions of a word or phrase.|`define:phishing`|Get a definition of "phishing" from various sources.|
+|`numrange:`|Searches for numbers within a specific range.|`site:example.com numrange:1000-2000`|Find pages on example.com containing numbers between 1000 and 2000.|
+|`allintext:`|Finds pages containing all specified words in the body text.|`allintext:admin password reset`|Search for pages containing both "admin" and "password reset" in the body text.|
+|`allinurl:`|Finds pages containing all specified words in the URL.|`allinurl:admin panel`|Look for pages with "admin" and "panel" in the URL.|
+|`allintitle:`|Finds pages containing all specified words in the title.|`allintitle:confidential report 2023`|Search for pages with "confidential," "report," and "2023" in the title.|
+|`AND`|Narrows results by requiring all terms to be present.|`site:example.com AND (inurl:admin OR inurl:login)`|Find admin or login pages specifically on example.com.|
+|`OR`|Broadens results by including pages with any of the terms.|`"linux" OR "ubuntu" OR "debian"`|Search for webpages mentioning Linux, Ubuntu, or Debian.|
+|`NOT`|Excludes results containing the specified term.|`site:bank.com NOT inurl:login`|Find pages on bank.com excluding login pages.|
+|`*` (wildcard)|Represents any character or word.|`site:socialnetwork.com filetype:pdf user* manual`|Search for user manuals (user guide, user handbook) in PDF format on socialnetwork.com.|
+|`..` (range search)|Finds results within a specified numerical range.|`site:ecommerce.com "price" 100..500`|Look for products priced between 100 and 500 on an e-commerce website.|
+|`" "` (quotation marks)|Searches for exact phrases.|`"information security policy"`|Find documents mentioning the exact phrase "information security policy".|
+|`-` (minus sign)|Excludes terms from the search results.|`site:news.com -inurl:sports`|Search for news articles on news.com excluding sports-related content.|
+
+### Google Dorking
+
+Google Dorking, also known as Google Hacking, is a technique that leverages the power of search operators to uncover sensitive information, security vulnerabilities, or hidden content on websites, using Google Search.
+
+Here are some common examples of Google Dorks, for more examples, refer to the [Google Hacking Database](https://www.exploit-db.com/google-hacking-database):
+
+- Finding Login Pages:
+    - `site:example.com inurl:login`
+    - `site:example.com (inurl:login OR inurl:admin)`
+- Identifying Exposed Files:
+    - `site:example.com filetype:pdf`
+    - `site:example.com (filetype:xls OR filetype:docx)`
+- Uncovering Configuration Files:
+    - `site:example.com inurl:config.php`
+    - `site:example.com (ext:conf OR ext:cnf)` (searches for extensions commonly used for configuration files)
+- Locating Database Backups:
+    - `site:example.com inurl:backup`
+    - `site:example.com filetype:sql`
+
+# Web Archives
+
+---
+
+In the fast-paced digital world, websites come and go, leaving only fleeting traces of their existence behind. However, thanks to the [Internet Archive's Wayback Machine](https://web.archive.org/), we have a unique opportunity to revisit the past and explore the digital footprints of websites as they once were.
+
+### What is the Wayback Machine?
+
+![[Assets/Information Gathering - Web Edition/9692a586ad44a82605d99a419ea1d556_MD5.webp]]
+
+`The Wayback Machine` is a digital archive of the World Wide Web and other information on the Internet. Founded by the Internet Archive, a non-profit organization, it has been archiving websites since 1996.
+
+It allows users to "go back in time" and view snapshots of websites as they appeared at various points in their history. These snapshots, known as captures or archives, provide a glimpse into the past versions of a website, including its design, content, and functionality.
+
+### How Does the Wayback Machine Work?
+
+The Wayback Machine operates by using web crawlers to capture snapshots of websites at regular intervals automatically. These crawlers navigate through the web, following links and indexing pages, much like how search engine crawlers work. However, instead of simply indexing the information for search purposes, the Wayback Machine stores the entire content of the pages, including HTML, CSS, JavaScript, images, and other resources.
+
+The Wayback Machine's operation can be visualized as a three-step process:
+
+![[Assets/Information Gathering - Web Edition/239678b5d690d08352077214749ee7fe_MD5.svg]]
+
+1. `Crawling`: The Wayback Machine employs automated web crawlers, often called "bots," to browse the internet systematically. These bots follow links from one webpage to another, like how you would click hyperlinks to explore a website. However, instead of just reading the content, these bots download copies of the webpages they encounter.
+2. `Archiving`: The downloaded webpages, along with their associated resources like images, stylesheets, and scripts, are stored in the Wayback Machine's vast archive. Each captured webpage is linked to a specific date and time, creating a historical snapshot of the website at that moment. This archiving process happens at regular intervals, sometimes daily, weekly, or monthly, depending on the website's popularity and frequency of updates.
+3. `Accessing`: Users can access these archived snapshots through the Wayback Machine's interface. By entering a website's URL and selecting a date, you can view how the website looked at that specific point. The Wayback Machine allows you to browse individual pages and provides tools to search for specific terms within the archived content or download entire archived websites for offline analysis.
+
+The frequency with which the Wayback Machine archives a website varies. Some websites might be archived multiple times a day, while others might only have a few snapshots spread out over several years. Factors that influence this frequency include the website's popularity, its rate of change, and the resources available to the Internet Archive.
+
+It's important to note that the Wayback Machine does not capture every single webpage online. It prioritizes websites deemed to be of cultural, historical, or research value. Additionally, website owners can request that their content be excluded from the Wayback Machine, although this is not always guaranteed.
+
+## Why the Wayback Machine Matters for Web Reconnaissance
+
+The Wayback Machine is a treasure trove for web reconnaissance, offering information that can be instrumental in various scenarios. Its significance lies in its ability to unveil a website's past, providing valuable insights that may not be readily apparent in its current state:
+
+1. `Uncovering Hidden Assets and Vulnerabilities`: The Wayback Machine allows you to discover old web pages, directories, files, or subdomains that might not be accessible on the current website, potentially exposing sensitive information or security flaws.
+2. `Tracking Changes and Identifying Patterns`: By comparing historical snapshots, you can observe how the website has evolved, revealing changes in structure, content, technologies, and potential vulnerabilities.
+3. `Gathering Intelligence`: Archived content can be a valuable source of OSINT, providing insights into the target's past activities, marketing strategies, employees, and technology choices.
+4. `Stealthy Reconnaissance`: Accessing archived snapshots is a passive activity that doesn't directly interact with the target's infrastructure, making it a less detectable way to gather information.
+
+## Going Wayback on HTB
+
+We can view the first archived version of HackTheBox by entering the page we are looking for into the Wayback Machine and selecting the earliest available capture date, being `2017-06-10 @ 04h23:01`
+
+![[Assets/Information Gathering - Web Edition/ac730f7833897ac25d7f59e450817c46_MD5.webp]]
+
+
+# Automating Recon
+
+---
+
+While manual reconnaissance can be effective, it can also be time-consuming and prone to human error. Automating web reconnaissance tasks can significantly enhance efficiency and accuracy, allowing you to gather information at scale and identify potential vulnerabilities more rapidly.
+
+## Why Automate Reconnaissance?
+
+Automation offers several key advantages for web reconnaissance:
+
+- `Efficiency`: Automated tools can perform repetitive tasks much faster than humans, freeing up valuable time for analysis and decision-making.
+- `Scalability`: Automation allows you to scale your reconnaissance efforts across a large number of targets or domains, uncovering a broader scope of information.
+- `Consistency`: Automated tools follow predefined rules and procedures, ensuring consistent and reproducible results and minimising the risk of human error.
+- `Comprehensive Coverage`: Automation can be programmed to perform a wide range of reconnaissance tasks, including DNS enumeration, subdomain discovery, web crawling, port scanning, and more, ensuring thorough coverage of potential attack vectors.
+- `Integration`: Many automation frameworks allow for easy integration with other tools and platforms, creating a seamless workflow from reconnaissance to vulnerability assessment and exploitation.
+
+## Reconnaissance Frameworks
+
+These frameworks aim to provide a complete suite of tools for web reconnaissance:
+
+- [FinalRecon](https://github.com/thewhiteh4t/FinalRecon): A Python-based reconnaissance tool offering a range of modules for different tasks like SSL certificate checking, Whois information gathering, header analysis, and crawling. Its modular structure enables easy customisation for specific needs.
+- [Recon-ng](https://github.com/lanmaster53/recon-ng): A powerful framework written in Python that offers a modular structure with various modules for different reconnaissance tasks. It can perform DNS enumeration, subdomain discovery, port scanning, web crawling, and even exploit known vulnerabilities.
+- [theHarvester](https://github.com/laramies/theHarvester): Specifically designed for gathering email addresses, subdomains, hosts, employee names, open ports, and banners from different public sources like search engines, PGP key servers, and the SHODAN database. It is a command-line tool written in Python.
+- [SpiderFoot](https://github.com/smicallef/spiderfoot): An open-source intelligence automation tool that integrates with various data sources to collect information about a target, including IP addresses, domain names, email addresses, and social media profiles. It can perform DNS lookups, web crawling, port scanning, and more.
+- [OSINT Framework](https://osintframework.com/): A collection of various tools and resources for open-source intelligence gathering. It covers a wide range of information sources, including social media, search engines, public records, and more.
+
+### FinalRecon
+
+`FinalRecon` offers a wealth of recon information:
+
+- `Header Information`: Reveals server details, technologies used, and potential security misconfigurations.
+- `Whois Lookup`: Uncovers domain registration details, including registrant information and contact details.
+- `SSL Certificate Information`: Examines the SSL/TLS certificate for validity, issuer, and other relevant details.
+- `Crawler`:
+    - HTML, CSS, JavaScript: Extracts links, resources, and potential vulnerabilities from these files.
+    - Internal/External Links: Maps out the website's structure and identifies connections to other domains.
+    - Images, robots.txt, sitemap.xml: Gathers information about allowed/disallowed crawling paths and website structure.
+    - Links in JavaScript, Wayback Machine: Uncovers hidden links and historical website data.
+- `DNS Enumeration`: Queries over 40 DNS record types, including DMARC records for email security assessment.
+- `Subdomain Enumeration`: Leverages multiple data sources (crt.sh, AnubisDB, ThreatMiner, CertSpotter, Facebook API, VirusTotal API, Shodan API, BeVigil API) to discover subdomains.
+- `Directory Enumeration`: Supports custom wordlists and file extensions to uncover hidden directories and files.
+- `Wayback Machine`: Retrieves URLs from the last five years to analyse website changes and potential vulnerabilities.
+
+Installation is quick and easy:
+
+Automating Recon
+
+```shell-session
+Draq4@htb[/htb]$ git clone https://github.com/thewhiteh4t/FinalRecon.git
+Draq4@htb[/htb]$ cd FinalRecon
+Draq4@htb[/htb]$ pip3 install -r requirements.txt
+Draq4@htb[/htb]$ chmod +x ./finalrecon.py
+Draq4@htb[/htb]$ ./finalrecon.py --help
+
+usage: finalrecon.py [-h] [--url URL] [--headers] [--sslinfo] [--whois]
+                     [--crawl] [--dns] [--sub] [--dir] [--wayback] [--ps]
+                     [--full] [-nb] [-dt DT] [-pt PT] [-T T] [-w W] [-r] [-s]
+                     [-sp SP] [-d D] [-e E] [-o O] [-cd CD] [-k K]
+
+FinalRecon - All in One Web Recon | v1.1.6
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --url URL   Target URL
+  --headers   Header Information
+  --sslinfo   SSL Certificate Information
+  --whois     Whois Lookup
+  --crawl     Crawl Target
+  --dns       DNS Enumeration
+  --sub       Sub-Domain Enumeration
+  --dir       Directory Search
+  --wayback   Wayback URLs
+  --ps        Fast Port Scan
+  --full      Full Recon
+
+Extra Options:
+  -nb         Hide Banner
+  -dt DT      Number of threads for directory enum [ Default : 30 ]
+  -pt PT      Number of threads for port scan [ Default : 50 ]
+  -T T        Request Timeout [ Default : 30.0 ]
+  -w W        Path to Wordlist [ Default : wordlists/dirb_common.txt ]
+  -r          Allow Redirect [ Default : False ]
+  -s          Toggle SSL Verification [ Default : True ]
+  -sp SP      Specify SSL Port [ Default : 443 ]
+  -d D        Custom DNS Servers [ Default : 1.1.1.1 ]
+  -e E        File Extensions [ Example : txt, xml, php ]
+  -o O        Export Format [ Default : txt ]
+  -cd CD      Change export directory [ Default : ~/.local/share/finalrecon ]
+  -k K        Add API key [ Example : shodan@key ]
+```
+
+To get started, you will first clone the `FinalRecon` repository from GitHub using `git clone https://github.com/thewhiteh4t/FinalRecon.git`. This will create a new directory named "FinalRecon" containing all the necessary files.
+
+Next, navigate into the newly created directory with `cd FinalRecon`. Once inside, you will install the required Python dependencies using `pip3 install -r requirements.txt`. This ensures that `FinalRecon` has all the libraries and modules it needs to function correctly.
+
+To ensure that the main script is executable, you will need to change the file permissions using `chmod +x ./finalrecon.py`. This allows you to run the script directly from your terminal.
+
+Finally, you can verify that `FinalRecon` is installed correctly and get an overview of its available options by running `./finalrecon.py --help`. This will display a help message with details on how to use the tool, including the various modules and their respective options:
+
+|Option|Argument|Description|
+|---|---|---|
+|`-h`, `--help`||Show the help message and exit.|
+|`--url`|URL|Specify the target URL.|
+|`--headers`||Retrieve header information for the target URL.|
+|`--sslinfo`||Get SSL certificate information for the target URL.|
+|`--whois`||Perform a Whois lookup for the target domain.|
+|`--crawl`||Crawl the target website.|
+|`--dns`||Perform DNS enumeration on the target domain.|
+|`--sub`||Enumerate subdomains for the target domain.|
+|`--dir`||Search for directories on the target website.|
+|`--wayback`||Retrieve Wayback URLs for the target.|
+|`--ps`||Perform a fast port scan on the target.|
+|`--full`||Perform a full reconnaissance scan on the target.|
+
+For instance, if we want `FinalRecon` to gather header information and perform a Whois lookup for `inlanefreight.com`, we would use the corresponding flags (`--headers` and `--whois`), so the command would be:
+
+Automating Recon
+
+```shell-session
+Draq4@htb[/htb]$ ./finalrecon.py --headers --whois --url http://inlanefreight.com
+
+ ______  __   __   __   ______   __
+/\  ___\/\ \ /\ "-.\ \ /\  __ \ /\ \
+\ \  __\\ \ \\ \ \-.  \\ \  __ \\ \ \____
+ \ \_\   \ \_\\ \_\\"\_\\ \_\ \_\\ \_____\
+  \/_/    \/_/ \/_/ \/_/ \/_/\/_/ \/_____/
+ ______   ______   ______   ______   __   __
+/\  == \ /\  ___\ /\  ___\ /\  __ \ /\ "-.\ \
+\ \  __< \ \  __\ \ \ \____\ \ \/\ \\ \ \-.  \
+ \ \_\ \_\\ \_____\\ \_____\\ \_____\\ \_\\"\_\
+  \/_/ /_/ \/_____/ \/_____/ \/_____/ \/_/ \/_/
+
+[>] Created By   : thewhiteh4t
+ |---> Twitter   : https://twitter.com/thewhiteh4t
+ |---> Community : https://twc1rcle.com/
+[>] Version      : 1.1.6
+
+[+] Target : http://inlanefreight.com
+
+[+] IP Address : 134.209.24.248
+
+[!] Headers :
+
+Date : Tue, 11 Jun 2024 10:08:00 GMT
+Server : Apache/2.4.41 (Ubuntu)
+Link : <https://www.inlanefreight.com/index.php/wp-json/>; rel="https://api.w.org/", <https://www.inlanefreight.com/index.php/wp-json/wp/v2/pages/7>; rel="alternate"; type="application/json", <https://www.inlanefreight.com/>; rel=shortlink
+Vary : Accept-Encoding
+Content-Encoding : gzip
+Content-Length : 5483
+Keep-Alive : timeout=5, max=100
+Connection : Keep-Alive
+Content-Type : text/html; charset=UTF-8
+
+[!] Whois Lookup : 
+
+   Domain Name: INLANEFREIGHT.COM
+   Registry Domain ID: 2420436757_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.registrar.amazon.com
+   Registrar URL: http://registrar.amazon.com
+   Updated Date: 2023-07-03T01:11:15Z
+   Creation Date: 2019-08-05T22:43:09Z
+   Registry Expiry Date: 2024-08-05T22:43:09Z
+   Registrar: Amazon Registrar, Inc.
+   Registrar IANA ID: 468
+   Registrar Abuse Contact Email: abuse@amazonaws.com
+   Registrar Abuse Contact Phone: +1.2024422253
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Name Server: NS-1303.AWSDNS-34.ORG
+   Name Server: NS-1580.AWSDNS-05.CO.UK
+   Name Server: NS-161.AWSDNS-20.COM
+   Name Server: NS-671.AWSDNS-19.NET
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+
+
+[+] Completed in 0:00:00.257780
+
+[+] Exported : /home/htb-ac-643601/.local/share/finalrecon/dumps/fr_inlanefreight.com_11-06-2024_11:07:59
+
+```
+
 ## Exercises/Questions
 ##### Exercises
 [[#The Zone Transfer Vulnerability|After performing a zone transfer for the domain inlanefreight.htb on the target system, how many DNS records are retrieved from the target system's name server?]] [(Link)](https://academy.hackthebox.com/module/144/section/1255)
