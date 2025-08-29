@@ -41,7 +41,7 @@ Furthermore, it rehashes the contents and sees both hash values match to confirm
 Why not just send hash alone?: can be modified if intercepted by hacker, thats the reason for encryption. 
 But anyone can decrypt the message then insert an altered/malicious hash message?:Yes but theres no way to encrypt it now since they would need the CA's private key. It would then be obvious that its not legit. A message anyone can see but no one can alter/recompose + hash = authenticity and integrity
 
-So to summarize:
+To summarize:
 
 - **CSR** = your unsigned request + proof you own the private key.
     

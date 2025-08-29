@@ -1,15 +1,16 @@
 ---
 created: 2025-08-25T17:28
+related:
+  - "[[Host File]]"
+  - "[[Domain Name]]"
+  - "[[Subdomains]]"
+  - "[[Vhosts]]"
+  - "[[Subdomain Bruteforcing]]"
 tags:
   - quick
   - "#selfnote"
   - "#insight"
   - recon
-related: 
-  - "[[DNS]]"
-  - "[[Host File]]"
-  - "[[Domain Name]]"
-  - "[[DNS Query Process]]"
 ---
 # Quick Note – GoBuster bruteforcing subdomains on vhost LAN server
 

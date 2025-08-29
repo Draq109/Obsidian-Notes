@@ -14,7 +14,6 @@ tags:
 - Virtual Hosts
 
 ## Notes
-<!-- Dump everything here as you go -->
 ### [[Information Gathering - Web Edition#Subdomains|Subdomains]]
 - Its the first section of a URL link, www in www.example.com
 - This extension offers a way to divide different services or sections

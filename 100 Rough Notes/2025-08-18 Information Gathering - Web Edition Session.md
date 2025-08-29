@@ -8,9 +8,6 @@ tags:
 ---
 # Study Session – 2025-08-18
 
-## Focus Topics
-- 
-
 ## Notes
 ### [SSL/TLS Secure Sockets Layer/Transport Layer Security](https://www.cloudflare.com/en-gb/learning/ssl/what-is-ssl/)
 - Provides encryption to most everyday use web applications or sites

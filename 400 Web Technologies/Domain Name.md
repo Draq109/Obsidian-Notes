@@ -3,9 +3,13 @@ created: 2025-08-21T18:01
 source: "[[Information Gathering - Web Edition#DNS]]"
 related:
   - "[[DNS]]"
-  - 
+  - "[[Host File]]"
+  - "[[Zone File]]"
+  - "[[WHOIS]]"
+  - "[[Subdomains]]"
 tags:
   - foundation
+  - web
 ---
 # Domain Name
 

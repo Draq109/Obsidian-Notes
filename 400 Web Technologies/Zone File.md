@@ -5,9 +5,11 @@ related:
   - "[[DNS]]"
   - "[[Domain Name]]"
   - "[[Subdomains]]"
+  - "[[Domain Information Groper]]"
 tags:
   - file
   - records
+  - web
 ---
 # Zone File
 

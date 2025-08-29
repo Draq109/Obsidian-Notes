@@ -1,13 +1,22 @@
 ---
-created: 2025-08-25T17:38
-source: "[[Information Gathering - Web Edition]]"
+created: 2025-08-29T08:32
+source: "[[Information Gathering - Web Edition#DNSEnum]]"
 related:
+  - "[[Subdomain Bruteforcing]]"
+  - "[[DNS]]"
+  - "[[Active Reconnaissance]]"
+  - "[[Subdomains]]"
+  - "[[Zone File]]"
 tags:
+  - tool
+  - web
+  - recon
+  - query
 ---
-# Vhosts
+# DNSEnum
 
 ## Summary
-<!-- 2–3 sentence plain language explanation -->
+
 
 ## Details
 <!-- Commands, breakdowns, examples -->

@@ -1,14 +1,18 @@
 ---
 created: 2025-08-21T16:56
 source: "[[Information Gathering - Web Edition#DNS]]"
-related: 
+related:
   - "[[Domain Name]]"
   - "[[WHOIS]]"
   - "[[Host File]]"
+  - "[[DNS Query Process]]"
+  - "[[Zone File]]"
+  - "[[Subdomains]]"
 tags:
   - system
   - protocol
   - network
+  - web
 ---
 # DNS
 

@@ -1,24 +1,30 @@
 ---
 created: 2025-08-14T18:16
-source:
-related: the main concept linking ideas
+source: "[[Information Gathering - Web Edition#Subdomains]]"
+related:
+  - "[[Domain Name]]"
+  - "[[DNS]]"
+  - "[[Host File]]"
+  - "[[DNS Query Process]]"
+  - "[[Zone File]]"
+  - "[[Subdomain Enumeration]]"
+  - "[[Subdomain Bruteforcing]]"
 tags:
-  - status/inprogress
+  - web
+  - foundation
 ---
 # Subdomains
 
 ## Summary
-<!-- 2–3 sentence plain language explanation -->
+Are an extension of a [[Domain Name]], applied before it. They are used to separate different functions or extensions of a web app or website. Such as staging environments, login portals, or legacy apps. (*admin.example.com*)
 
 ## Details
-<!-- Commands, breakdowns, examples -->
+- The subdomains are a great feature for keeping different sections organized.
+- Used to give different sectors of a company their own environment.
+	- finance department, HR, customer support, etc..
+- Information for what subdomain are available are found in the [[Zone File]] or through[[Certificate Transparency (CT) Logs]]
+- Fragments security since each subdomain will have different security measures in place.
+- Subdomains can be nested, for example *dev1.admin.example.com* 
 
 ## Why It Matters
-<!-- Practical significance in cybersec context -->
-
-## References
-<!-- - This is a list of other notes, sites, or docs you cross-referenced to understand the concept better.
-- Can be multiple, can be internal (`[[Other Note]]`) or external (`https://...`).
-- It answers: “What else informed this note?”-->
-- [[Study Session YYYY-MM-DD]]
--  https://developer.mozilla.org/en-US/docs/Web/HTTP
+Subdomains help organize a company’s web presence but come with security tradeoffs. Fragmented environments can increase the attack surface, as forgotten or misconfigured subdomains may expose sensitive information. At the same time, separation limits the blast radius of an incident, allows custom security for each subdomain, and isolates development, staging, and production environments. Proper management is key — when handled well, subdomains improve security through compartmentalization, but poor management can create multiple weak points.

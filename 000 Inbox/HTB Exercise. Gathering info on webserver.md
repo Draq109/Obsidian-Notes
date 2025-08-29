@@ -1,13 +1,16 @@
 ---
 created: 2025-08-25T19:25
 source: "[[Information Gathering - Web Edition]]"
-related: 
+related:
   - "[[DNS]]"
   - "[[Host File]]"
   - "[[Passive Reconnaissance]]"
   - "[[Active Reconnaissance]]"
   - "[[Vhosts]]"
+  - "[[Subdomains]]"
 tags:
+  - recon
+  - status/not-started
 ---
 # HTB Exercise. Gathering info on webserver
 

@@ -6,6 +6,8 @@ tags:
   - query
   - recon
   - osint
+  - tool
+  - web
 ---
 # WHOIS
 

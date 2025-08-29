@@ -1,10 +1,10 @@
 ---
 Start: 2025-08-04
-End: 2025-08-07
-Sessions: 4
+End: 2025-08-25
+Sessions: 5
 tags:
   - source
-  - status/inprogress
+  - status/finished
 ---
 ### Module Sections
 - [[#Introduction]]
@@ -18,13 +18,13 @@ tags:
 - [[#Virtual Hosts]]
 - [[#Certificate Transparency Logs]]
 - [[#Fingerprinting]]
-- Crawling
-- robots.txt
-- .Well-Known URIs
-- Creepy Crawlies
-- Search Engine Discovery
-- Web Archives
-- Automating Recon
+- [[#Crawling]]
+- [[#robots.txt]]
+- [[#Web Recon and .well-known]]
+- [[#Creepy Crawlies]]
+- [[#Search Engine Discovery]]
+- [[#Web Archives]]
+- [[#Automating Recon]]
 - Skills Assessment
 ### Reference
 https://academy.hackthebox.com/module/details/75

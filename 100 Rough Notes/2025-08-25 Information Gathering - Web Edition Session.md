@@ -17,7 +17,7 @@ tags:
 - [Google Dorking examples](https://www.exploit-db.com/google-hacking-database)
 - Can uncover non listed login, files, or directories not listed on front of the page.
 
-## [[Information Gathering - Web Edition#Web Archives|Web Archives]]
+### [[Information Gathering - Web Edition#Web Archives|Web Archives]]
 - Contains a historical view of a website over the years
 - The most famous being the waybackmachine
 - Uses crawling to gather the information, downloading all media, json, html, js files encountered.
