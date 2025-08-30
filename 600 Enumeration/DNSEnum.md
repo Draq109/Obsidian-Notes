@@ -16,17 +16,18 @@ tags:
 # DNSEnum
 
 ## Summary
-
+DNSEnum is a tool used to bruteforce subdomains through dns queries. By providing a wordlist it substitutes it as a subdomain and creates a request. It also returns all A records for that domain, name servers, MX servers, and as well as zone transfer (if possible)
 
 ## Details
-<!-- Commands, breakdowns, examples -->
+``` bash
+dnsenum example.com #Returns avaliable records,bruteforces with default wordlist 
+dnsenum --dnsserver 8.8.8.8  example.com #specifies dns server
+dnsenum -f /.../wordlist example.com #provide wordlist for subdomains
+dnsenum --enum example.com           #full features whois and reverse lookup
+```
 
 ## Why It Matters
-<!-- Practical significance in cybersec context -->
+Good and simple tool thats easy to use for gathering subdomains. Great for semi stealth and a good place to start in recon. (assuming you have a domain name and its public)
 
 ## References
-<!-- - This is a list of other notes, sites, or docs you cross-referenced to understand the concept better.
-- Can be multiple, can be internal (`[[Other Note]]`) or external (`https://...`).
-- It answers: “What else informed this note?”-->
-- [[Study Session YYYY-MM-DD]]
--  https://developer.mozilla.org/en-US/docs/Web/HTTP
+[[2025-08-15 Information Gathering - Web Edition Session]]

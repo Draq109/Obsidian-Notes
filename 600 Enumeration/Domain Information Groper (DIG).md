@@ -12,7 +12,7 @@ tags:
   - tool
   - query
 ---
-# Domain Information Groper
+# Domain Information Groper (DIG)
 
 ## Summary
 Is a tool used to do a DNS resolve on a domain, subdomain, or IP. *dig* can return the records you ask for, such as MX or A/AAAA records. All information originates from the nameserver, from either the owner of the domain or chosen provider. Not all records will be available to retrieve.

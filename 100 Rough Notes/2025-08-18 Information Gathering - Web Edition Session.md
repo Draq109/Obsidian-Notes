@@ -3,8 +3,8 @@ created: 2025-08-18T08:56
 source: "[[Information Gathering - Web Edition]]"
 tags:
   - "#session"
-  - status/inprogress
   - source/HTB
+  - status/finished
 ---
 # Study Session – 2025-08-18
 
@@ -73,13 +73,3 @@ tags:
 - **cURL** can banner grab, you look at headers
 - **nikto** extensive test that returns various info on software versions,insecure files/configs, and security risks.
 - [[Information Gathering - Web Edition#Fingerprinting inlanefreight.com|Some tool examples]]
-
-
-## Quick Tags & Links
-<!-- Inline #tags and [[links]] for concepts you want to break out later -->
-- 
-
-## To Extract
-<!-- List notes you know should become their own atomic note later -->
-- [[Topic Example]] → atomic note
-- [[Another Concept]]

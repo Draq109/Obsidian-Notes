@@ -3,8 +3,8 @@ created: 2025-08-15T08:54:00
 source: "[[Information Gathering - Web Edition]]"
 tags:
   - "#session"
-  - status/inprogress
   - source/HTB
+  - status/finished
 ---
 # Study Session – 2025-08-15
 ## Focus Topics
@@ -104,18 +104,3 @@ gobuster vhost -u http://inlanefreight.htb:81 -w /usr/share/seclists/Discovery/D
 ```
 - -u for URL, -w is our wordlist, and --append-domain is required for subdomain fuzzing
 
-
-
-## Quick Tags & Links
-<!-- Inline #tags and [[links]] for concepts you want to break out later -->
-- 
-
-## To Extract
-<!-- List notes you know should become their own atomic note later -->
-- [[Subdomains]]
-- [[DNS Zone Transfers]]
-- [[Virtual Hosts]]
-- [[Subdomain Enumeration]]
-- [[Certificate Transparency]]
-- [[Subdomain Bruteforcing]]
-- [[Server Vhost Lookup]]

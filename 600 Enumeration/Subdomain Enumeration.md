@@ -3,7 +3,7 @@ created: 2025-08-28T11:19
 source: "[[Information Gathering - Web Edition#Subdomains]]"
 related:
   - "[[DNS]]"
-  - "[[Domain Information Groper]]"
+  - "[[Domain Information Groper (DIG)]]"
   - "[[Subdomains]]"
   - "[[Vhosts]]"
   - "[[Zone File]]"
@@ -21,7 +21,7 @@ Is the idea of listing and gathering as many possible subdomains from a given do
 Involves directly targeting the target domain, with tools such as gobuster or fnff. Usually through the process of brute forcing or crawling. Other methods involve querying the name server directly for records, possibility for zone transfer (AXFR). This approach is exposing who you are to the targeted web server, giving the target warnings/time to fully secure or hardened their security. 
 
 #### Passive Enumeration
-As the name suggests, the approach taken is more passive in that we dont engage with the target directly. Using [[Certificate Transparency (CT) Logs]] to list subdomain certificates, wayback machine to visit old versions of the site, [[WHOIS]], google dorking, [[Domain Information Groper|Dig]], etc.. None of these actions will make your presence know to the web server/target.
+As the name suggests, the approach taken is more passive in that we dont engage with the target directly. Using [[Certificate Transparency (CT) Logs]] to list subdomain certificates, wayback machine to visit old versions of the site, [[WHOIS]], google dorking, [[Domain Information Groper (DIG)|Dig]], etc.. None of these actions will make your presence know to the web server/target.
 
 
 ## Why It Matters

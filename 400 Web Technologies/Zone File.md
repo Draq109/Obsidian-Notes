@@ -5,7 +5,7 @@ related:
   - "[[DNS]]"
   - "[[Domain Name]]"
   - "[[Subdomains]]"
-  - "[[Domain Information Groper]]"
+  - "[[Domain Information Groper (DIG)]]"
 tags:
   - file
   - records
