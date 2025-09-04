@@ -4,7 +4,6 @@ source: "[[Information Gathering - Web Edition]]"
 tags:
   - "#session"
   - status/inprogress
-  - source/HTB
 ---
 # Study Session – 2025-08-22
 

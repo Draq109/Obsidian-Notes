@@ -11,6 +11,7 @@
 
 # Ignore Assets
 Assets/
+images/
 # Keep hotkeys, appearance, and snippets
 # (do NOT ignore these, so you can sync them)
 # .obsidian/hotkeys.json

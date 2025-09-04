@@ -1,9 +1,9 @@
 ---
 created: "{{date:YYYY-MM-DDTHH:mm}}"
-source:
-related:
 tags:
   - quick
+  - idea
+  - question
 ---
 # Quick Note – {{title}}
 

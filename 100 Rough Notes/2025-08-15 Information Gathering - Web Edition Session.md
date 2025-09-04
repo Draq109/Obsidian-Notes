@@ -3,7 +3,6 @@ created: 2025-08-15T08:54:00
 source: "[[Information Gathering - Web Edition]]"
 tags:
   - "#session"
-  - source/HTB
   - status/finished
 ---
 # Study Session – 2025-08-15
